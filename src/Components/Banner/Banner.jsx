@@ -50,22 +50,21 @@ const Banner = () => {
           Trusted by Millions, Built for You
         </h1>
         <div className="parents mx-auto px-3 md:px-0 md:w-[70%] flex flex-wrap md:flex-row md:gap-20 justify-center items-center gap-10">
-            <div className="space-y-4">
-                <h2>Total Downloads</h2>
-                <h1 className="text-5xl font-semibold">29.6M</h1>
-                <h2>21% more than last month</h2>
-            </div>
-            <div className="space-y-4">
-                <h2>Total Downloads</h2>
-                <h1 className="text-5xl font-semibold">29.6M</h1>
-                <h2>21% more than last month</h2>
-            </div>
-            <div className="space-y-4">
-                <h2>Total Downloads</h2>
-                <h1 className="text-5xl font-semibold">29.6M</h1>
-                <h2>21% more than last month</h2>
-            </div>
-
+          <div className="space-y-4">
+            <h2>Total Downloads</h2>
+            <h1 className="text-5xl font-semibold">29.6M</h1>
+            <h2>21% more than last month</h2>
+          </div>
+          <div className="space-y-4">
+            <h2>Total Downloads</h2>
+            <h1 className="text-5xl font-semibold">29.6M</h1>
+            <h2>21% more than last month</h2>
+          </div>
+          <div className="space-y-4">
+            <h2>Total Downloads</h2>
+            <h1 className="text-5xl font-semibold">29.6M</h1>
+            <h2>21% more than last month</h2>
+          </div>
         </div>
       </div>
     </div>
