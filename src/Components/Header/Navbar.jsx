@@ -32,12 +32,12 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-[18px] font-semibold"
           >
             <NavLink to={"/"}>
-              <li className="hover:bg-[#632EE3] hover:text-white px-2 cursor-pointer">
+              <li className="  px-2 cursor-pointer">
                 Home
               </li>
             </NavLink>
-           <NavLink to={"/"}>
-              <li className="hover:bg-[#632EE3] hover:text-white px-2 cursor-pointer">
+           <NavLink to={"/apps"}>
+              <li className="  px-2 cursor-pointer">
                 Apps
               </li>
             </NavLink>

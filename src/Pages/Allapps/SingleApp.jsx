@@ -2,7 +2,7 @@ import React from 'react';
 import downloadImg from "../../assets/icon-downloads.png";
 import rating from "../../assets/icon-ratings.png";
 const SingleApp = ({app}) => {
-    console.log(app);
+    // console.log(app);
     const { title, image, ratingAvg, reviews } = app;
       return (
         <div className="card bg-base-100 shadow-sm cursor-pointer">
