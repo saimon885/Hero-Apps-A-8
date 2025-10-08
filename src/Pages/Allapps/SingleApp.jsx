@@ -1,11 +1,13 @@
 import React from 'react';
 import downloadImg from "../../assets/icon-downloads.png";
 import rating from "../../assets/icon-ratings.png";
+import { NavLink } from 'react-router';
 const SingleApp = ({app}) => {
     // console.log(app);
-    const { title, image, ratingAvg, reviews } = app;
+    const { id,title, image, ratingAvg, downloads } = app;
       return (
-        <div className="card bg-base-100 shadow-sm cursor-pointer">
+        <NavLink to={`/details/${id}`}>
+            <div className="card bg-base-100 shadow-sm cursor-pointer">
           <figure>
             <img
               className="w-[200px] h-[210px] p-4 object-cover"
@@ -18,7 +20,7 @@ const SingleApp = ({app}) => {
             <div className="card-actions flex justify-between">
               <div className="bg-[#E4E8DC] px-3 py-1 flex gap-2 cursor-pointer rounded">
                 <img className="w-[16px] object-contain" src={downloadImg} alt="" />
-                <span className="text-[#00D390] font-semibold"> {reviews}M</span>
+                <span className="text-[#00D390] font-semibold"> {downloads}M</span>
               </div>
               <div className="bg-[#FFF0E1] px-3 py-1 flex gap-2 cursor-pointer rounded">
                 <img
@@ -31,6 +33,7 @@ const SingleApp = ({app}) => {
             </div>
           </div>
         </div>
+        </NavLink>
       );
 };
 

@@ -3,6 +3,10 @@ import logo from "../../assets/logo.png";
 import "../../index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faAppStore,
+} from "@fortawesome/free-brands-svg-icons";
+import {faHouse,faDownload} from "@fortawesome/free-solid-svg-icons"
 import { Link, NavLink } from "react-router";
 import "./Navbar.css";
 const Navbar = () => {
@@ -32,14 +36,10 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-[18px] font-semibold"
           >
             <NavLink to={"/"}>
-              <li className="  px-2 cursor-pointer">
-                Home
-              </li>
+              <li className="  px-2 cursor-pointer">Home</li>
             </NavLink>
-           <NavLink to={"/apps"}>
-              <li className="  px-2 cursor-pointer">
-                Apps
-              </li>
+            <NavLink to={"/apps"}>
+              <li className="  px-2 cursor-pointer">Apps</li>
             </NavLink>
             <li className="hover:bg-[#632EE3] hover:text-white px-2 cursor-pointer">
               Installation
@@ -56,14 +56,23 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-5 text-[18px] font-semibold">
-          <NavLink to={"/"}>
+        <ul className="menu menu-horizontal px-1 gap-10 text-[18px] font-semibold">
+          <NavLink to={"/"} className='flex items-center'>
+          <span>
+            <FontAwesomeIcon icon={faHouse} />
+          </span>
             <li className="cursor-pointer">Home</li>
           </NavLink>
-          <NavLink to={"/apps"}>
-            <li className="cursor-pointer">Apps</li>
+          <NavLink to={"/apps"} className='flex items-center'>
+            <span className="text-2xl">
+              <FontAwesomeIcon icon={faAppStore} />
+            </span>{" "}
+            <li className="cursor-pointer"> Apps</li>
           </NavLink>
-          <li className="cursor-pointer">Installation</li>
+          <Link className="flex items-center">
+            <span><FontAwesomeIcon icon={faDownload} /></span>
+            <li className="cursor-pointer">Installation</li>
+          </Link>
         </ul>
       </div>
       <div className="navbar-end md:mr-7">

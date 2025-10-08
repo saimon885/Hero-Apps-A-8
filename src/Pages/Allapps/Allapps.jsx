@@ -1,12 +1,12 @@
 import React, { use, useState } from "react";
 import SingleApp from "./SingleApp";
-import errorMsg from "../../assets/App-Error.png"
+// import errorMsg from "../../assets/App-Error.png"
 const Allapps = ({ homeData }) => {
   const [search, setSearch] = useState("");
   const Apps = use(homeData);
   const term = search.trim().toLowerCase()
   const searchApps = term ?  Apps.filter(Appd => Appd.title.toLowerCase().includes(term)): Apps;
-  console.log(searchApps);
+//   console.log(searchApps);
 
   return (
     <div>
@@ -22,7 +22,7 @@ const Allapps = ({ homeData }) => {
           <input
             defaultValue={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="border px-3 py-1 md:w-70"
+            className="border px-3 py-1 rounded-2xl md:w-70"
             type="search"
             placeholder="search Apps"
             
@@ -31,7 +31,8 @@ const Allapps = ({ homeData }) => {
       </div>
      {searchApps.length === 0 && term.length > 0 ? (
         <div className="my-10">
-            <img className="mx-auto" src={errorMsg} alt="" />
+            {/* <img className="mx-auto" src={errorMsg} alt="" /> */}
+            <h1 className="text-3xl text-center font-bold">Apps is Not Found!!</h1>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mx-5 my-5">
