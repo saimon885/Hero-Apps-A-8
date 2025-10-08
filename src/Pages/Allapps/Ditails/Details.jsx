@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 import download from "../../../assets/icon-downloads.png";
 import star from "../../../assets/icon-ratings.png";
@@ -13,7 +13,10 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { toast, ToastContainer } from "react-toastify";
 const Details = () => {
+  const [isselected, setSelected] = useState(false);
+
   const { id } = useParams();
   const convid = parseInt(id);
   const AppsAll = useLoaderData();
@@ -33,7 +36,10 @@ const Details = () => {
   // console.log(ratings);
   const chartData = ratings.slice().reverse();
   console.log(chartData);
-
+  const handleDownload = () => {
+    toast(`${title} Install Successfully`);
+    setSelected(true);
+  };
   return (
     <div>
       <div className="my-5 mx-10 md:flex items-center gap-15 h-auto border-b pb-7 border-[#C9B7CB]">
@@ -71,8 +77,12 @@ const Details = () => {
               <h1 className="font-bold text-2xl">{reviews}K</h1>
             </div>
           </div>
-          <button className="btn bg-[#00D390] text-white font-semibold">
-            Install Now ({size} MB)
+          <button
+            onClick={handleDownload}
+            disabled={isselected}
+            className="btn bg-[#00D390] text-white font-semibold"
+          >
+            {isselected === true ? "Selected" : `Install Now (${size} MB)`}
           </button>
         </div>
       </div>
@@ -106,6 +116,7 @@ const Details = () => {
         <h1 className="text-2xl font-semibold">Description</h1>
         <p className="text-[#627382]">{description}</p>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

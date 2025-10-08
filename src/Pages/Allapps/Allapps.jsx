@@ -32,7 +32,7 @@ const Allapps = ({ homeData }) => {
      {searchApps.length === 0 && term.length > 0 ? (
         <div className="my-10">
             {/* <img className="mx-auto" src={errorMsg} alt="" /> */}
-            <h1 className="text-3xl text-center font-bold">Apps is Not Found!!</h1>
+            <h1 className="text-5xl px-2 py-11 text-center font-bold">Apps is Not Found!!</h1>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mx-5 my-5">
