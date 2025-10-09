@@ -13,36 +13,36 @@ const Navbar = () => {
   return (
     <div className="navbar bg-white">
       <div className="navbar-start">
-        <div className="dropdown">
+        <div className="dropdown -ml-2">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
               fill="none"
-              viewBox="0 0 24 24"
+              viewBox="0 0 17 20"
               stroke="currentColor"
             >
               {" "}
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="2"
+                strokeWidth="3"
                 d="M4 6h16M4 12h8m-8 6h16"
               />{" "}
             </svg>
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-[18px] font-semibold"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-60 p-2 shadow text-[18px] font-semibold"
           >
             <NavLink to={"/"}>
-              <li className="  px-2 cursor-pointer">Home</li>
+              <li className="  px-2 cursor-pointer py-1 text-2xl">Home</li>
             </NavLink>
             <NavLink to={"/apps"}>
-              <li className="  px-2 cursor-pointer">Apps</li>
+              <li className="  px-2 cursor-pointer py-1 text-2xl">Apps</li>
             </NavLink>
             <NavLink to={"/installation"}>
-              <li className=" px-2 cursor-pointer">
+              <li className=" px-2 cursor-pointer py-1 text-2xl">
               Installation
             </li>
             </NavLink>

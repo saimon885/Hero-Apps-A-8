@@ -25,12 +25,12 @@ export const router = createBrowserRouter([
           </Suspense>
         ),
       },{
-        path:"/installation",
+        path:"installation",
         loader: ()=> fetch("/main.json"),
         Component: Installation
       },
       {
-        path: "/apps",
+        path: "apps",
         element: (
           <Suspense fallback={<Spinner></Spinner>}>
             <Allapps homeData={homeData}></Allapps>
@@ -38,7 +38,7 @@ export const router = createBrowserRouter([
         ),
       },
       {
-        path:"/details/:id",
+        path:"details/:id",
         errorElement: <ErrorAnotherPage></ErrorAnotherPage> ,
         loader: ()=> fetch("/main.json"),
         Component:Details
