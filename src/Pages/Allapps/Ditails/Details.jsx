@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 import download from "../../../assets/icon-downloads.png";
 import star from "../../../assets/icon-ratings.png";
@@ -14,6 +14,7 @@ import {
   YAxis,
 } from "recharts";
 import { toast, ToastContainer } from "react-toastify";
+import { addToStoregeDb, getStoredApp } from "../../../Utility/AddtoAdd";
 const Details = () => {
   const [isselected, setSelected] = useState(false);
 
@@ -35,10 +36,20 @@ const Details = () => {
   } = singleApp;
   // console.log(ratings);
   const chartData = ratings.slice().reverse();
-  console.log(chartData);
-  const handleDownload = () => {
+  // console.log(chartData);
+  useEffect(() => {
+    const storedApps = getStoredApp();
+
+    if (storedApps.includes(id)) {
+      setSelected(true);
+    } else {
+      setSelected(false);
+    }
+  });
+  const handleDownload = (id) => {
     toast(`${title} Install Successfully`);
     setSelected(true);
+    addToStoregeDb(id);
   };
   return (
     <div>
@@ -78,7 +89,7 @@ const Details = () => {
             </div>
           </div>
           <button
-            onClick={handleDownload}
+            onClick={() => handleDownload(id)}
             disabled={isselected}
             className="btn bg-[#00D390] text-white font-semibold"
           >

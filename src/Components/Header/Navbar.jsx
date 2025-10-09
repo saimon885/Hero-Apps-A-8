@@ -41,9 +41,11 @@ const Navbar = () => {
             <NavLink to={"/apps"}>
               <li className="  px-2 cursor-pointer">Apps</li>
             </NavLink>
-            <li className="hover:bg-[#632EE3] hover:text-white px-2 cursor-pointer">
+            <NavLink to={"/installation"}>
+              <li className=" px-2 cursor-pointer">
               Installation
             </li>
+            </NavLink>
           </ul>
         </div>
         <Link to={"/"}>
@@ -69,10 +71,10 @@ const Navbar = () => {
             </span>{" "}
             <li className="cursor-pointer"> Apps</li>
           </NavLink>
-          <Link className="flex items-center">
+          <NavLink to={"/installation"} className="flex items-center">
             <span><FontAwesomeIcon icon={faDownload} /></span>
             <li className="cursor-pointer">Installation</li>
-          </Link>
+          </NavLink>
         </ul>
       </div>
       <div className="navbar-end md:mr-7">

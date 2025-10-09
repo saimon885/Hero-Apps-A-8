@@ -8,6 +8,7 @@ import Allapps from "../Pages/Allapps/Allapps";
 import Spinner from "./Loading/Spinner";
 import Details from "../Pages/Allapps/Ditails/Details";
 import ErrorAnotherPage from "./ErrorPage/ErrorAnotherOPT/ErrorAnotherPage";
+import Installation from "../Pages/Allapps/Installation/Installation";
 const homeData = fetch("/main.json").then((res) => res.json());
 export const router = createBrowserRouter([
   {
@@ -23,9 +24,13 @@ export const router = createBrowserRouter([
             <Home homeData={homeData}></Home>
           </Suspense>
         ),
+      },{
+        path:"/installation",
+        loader: ()=> fetch("/main.json"),
+        Component: Installation
       },
       {
-        path: "apps",
+        path: "/apps",
         element: (
           <Suspense fallback={<Spinner></Spinner>}>
             <Allapps homeData={homeData}></Allapps>
@@ -33,7 +38,7 @@ export const router = createBrowserRouter([
         ),
       },
       {
-        path:"details/:id",
+        path:"/details/:id",
         errorElement: <ErrorAnotherPage></ErrorAnotherPage> ,
         loader: ()=> fetch("/main.json"),
         Component:Details
