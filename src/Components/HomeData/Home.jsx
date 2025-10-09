@@ -22,7 +22,7 @@ const Home = ({ homeData }) => {
           ))}
         </div>
         <div className="text-center mb-10">
-           <Link to={"/apps"}> <span className="btn  bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold rounded">Show All</span></Link>
+           <Link to={"/apps"}> <span className="btn px-7 bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold rounded">Show All</span></Link>
         </div>
       </div>
     </div>

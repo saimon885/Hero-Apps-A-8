@@ -18,12 +18,12 @@ const INstalldPage = ({ apps }) => {
         <div className="flex justify-between rounded-2xl shadow bg-white px-3 mt-4 mb-3 items-center py-2">
       <div className="prt flex gap-4 items-center">
         <div className="bg-[#D9D9D9] p-2 rounded">
-          <img className="w-[40px]" src={image} alt="" />
+          <img className="w-[25px] md:w-[40px]" src={image} alt="" />
         </div>
         <div>
-          <h1 className="text-2xl font-semibold text-[#001931]">{title}</h1>
-          <div className="flex gap-4 mt-2">
-            <span className="flex gap-1">
+          <h1 className="text-[18px] md:text-2xl font-semibold text-[#001931]">{title}</h1>
+          <div className="flex gap-3 md:gap-4 mt-2">
+            <span className="flex md:gap-1">
               <img
                 className="w-[15px] object-contain"
                 src={downloadSymb}
@@ -31,7 +31,7 @@ const INstalldPage = ({ apps }) => {
               />
               <p className="font-bold text-[#00D390]">{downloads}</p>
             </span>
-            <span className="flex gap-1">
+            <span className="flex md:gap-1">
               <img
                 className="w-[15px] object-contain"
                 src={ratingsymb}
@@ -48,7 +48,7 @@ const INstalldPage = ({ apps }) => {
       <div>
         <button
           onClick={() => hanleUninstall()}
-          className="btn font-semibold bg-[#00D390] text-white"
+          className="btn w-[70px] md:w-full font-semibold bg-[#00D390] text-white"
         >
           Uninstall
         </button>

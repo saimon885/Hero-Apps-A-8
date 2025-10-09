@@ -17,7 +17,7 @@ const SingleData = ({ apps }) => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{title}</h2>
+        <h2 className="card-title text-2xl text-center mb-2 -mt-5">{title}</h2>
         <div className="card-actions flex justify-between">
           <div className="bg-[#E4E8DC] px-3 py-1 flex gap-2 cursor-pointer rounded">
             <img className="w-[16px] object-contain" src={downloadImg} alt="" />

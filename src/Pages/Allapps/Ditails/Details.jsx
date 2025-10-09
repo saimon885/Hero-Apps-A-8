@@ -54,7 +54,7 @@ const Details = () => {
   return (
     <div>
       <div className="my-5 mx-10 md:flex items-center gap-15 h-auto border-b pb-7 border-[#C9B7CB]">
-        <div className="">
+        <div className="bg-white rounded-2xl">
           <img
             className="md:w-[300px] mx-auto md:mx-0 h-[220px] p-4 object-cover"
             src={image}
@@ -71,7 +71,7 @@ const Details = () => {
               </span>
             </h2>
           </div>
-          <div className="flex gap-10">
+          <div className="flex gap-10 items-center">
             <div>
               <img className="w-[30px]" src={download} alt="" />
               <h2>Downloads</h2>
@@ -97,7 +97,7 @@ const Details = () => {
           </button>
         </div>
       </div>
-      <div>
+      <div className="border-b border-[#C9B7CB] mx-7 mb-3 pb-3">
         <h2 className="text-2xl font-semibold ml-10">Ratings</h2>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart
@@ -109,7 +109,7 @@ const Details = () => {
 
             <XAxis
               type="number"
-              tickFormatter={(value) => `${value / 100000}`}
+              tickFormatter={(value) => `${value}`}
             />
 
             <Tooltip
