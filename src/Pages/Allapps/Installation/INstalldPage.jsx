@@ -29,7 +29,7 @@ const INstalldPage = ({ apps }) => {
                 src={downloadSymb}
                 alt=""
               />
-              <p className="font-bold text-[#00D390]">{downloads}</p>
+              <p className="font-bold text-[#00D390]">{downloads}M</p>
             </span>
             <span className="flex md:gap-1">
               <img
