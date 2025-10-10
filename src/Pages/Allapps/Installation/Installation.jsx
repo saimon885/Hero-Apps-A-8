@@ -54,7 +54,7 @@ const Installation = () => {
       </div>
       <div>
         {appinstall.map((apps) => (
-          <INstalldPage key={apps.id} apps={apps}></INstalldPage>
+          <INstalldPage key={apps.id} setAppinstall={setAppinstall} apps={apps}></INstalldPage>
         ))}
       </div>
     </div>
